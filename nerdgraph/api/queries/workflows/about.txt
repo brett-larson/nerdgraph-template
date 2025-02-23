@@ -1,0 +1,2 @@
+The workflow directory will contain sub-directories. Each sub-directory
+will contain queries and logic for a specific workflow to complete a specific task.

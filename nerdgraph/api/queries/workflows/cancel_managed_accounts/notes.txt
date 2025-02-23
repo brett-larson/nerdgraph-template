@@ -1,0 +1,39 @@
+Initial Query to delete one account
+{
+  actor {
+    account(id: 6317713) {
+      id
+      name
+      isCanceled
+    }
+  }
+}
+
+Results when account is active:
+
+{
+  "data": {
+    "accountManagementCancelAccount": {
+      "id": 6317713,
+      "isCanceled": true,
+      "name": "Playground"
+    }
+  }
+}
+
+Results when the account is already canceled:
+
+{
+  "data": {
+    "accountManagementCancelAccount": {
+      "id": 6317713,
+      "isCanceled": true,
+      "name": "Playground"
+    }
+  }
+}
+
+No difference if the account is active vs. canceled when canceling account.
+
+The cancellation takes maybe 5 seconds to complete. User access is removed
+and API keys are deleted.

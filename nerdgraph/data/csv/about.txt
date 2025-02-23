@@ -1,0 +1,1 @@
+The csv directory holds all CSV files used in the application. It is empty by default.

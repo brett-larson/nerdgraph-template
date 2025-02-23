@@ -1,0 +1,1 @@
+The log directory is used for storing log files, but is empty by default.
