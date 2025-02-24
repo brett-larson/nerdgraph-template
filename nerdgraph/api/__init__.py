@@ -1,4 +1,4 @@
-from .api_client import execute_query
+from .api_client import GraphQLClient
 from .rate_limiter import RateLimiter
 
-__all__ = ["execute_query", "RateLimiter"]
+__all__ = ["GraphQLClient", "RateLimiter"]

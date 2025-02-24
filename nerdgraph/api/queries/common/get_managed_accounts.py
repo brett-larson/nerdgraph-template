@@ -1,6 +1,8 @@
-"""
-This module contains the GraphQL query for fetching managed accounts
-"""
+from nerdgraph.utils.logger import setup_logger
+
+logger = setup_logger(__name__)
+
+
 def get_managed_accounts_query():
     """Returns the GraphQL query for fetching managed accounts"""
     return """
@@ -35,6 +37,10 @@ def process_managed_accounts_response(response):
     """
     try:
         accounts = response['data']['actor']['organization']['accountManagement']['managedAccounts']
+
+        account_count = len(accounts)
+        logger.info(f"Number of managed accounts: {account_count}")
+
         return [
             {
                 'id': account['id'],
